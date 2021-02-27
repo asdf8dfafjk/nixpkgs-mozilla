@@ -310,6 +310,43 @@ rec {
     };
   };
 
+################################# USE THIS FOR RECENT NIXPKGS 
+########## after changing of course.
+#	# yes rust, not rustc
+#	new_rustc= mozilla_rust_channel.rust;
+#
+#	new_cargo= mozilla_rust_channel.cargo;
+#
+#	new_fetchcargotarball=nixpkgs.rustplatform.fetchcargotarball.override{ 
+#		cargo = new_cargo ;
+#	};
+#
+#	new_buildrustpackage =nixpkgs.rustplatform.buildrustpackage.override{ 
+#		cargo = new_cargo;
+#		rustc = new_rustc;
+#		fetchcargotarball = new_fetchcargotarball;
+#	};
+#
+#	new_rustcsrc = "dummy";
+#
+#	new_rustlibsrc = 
+#		let 
+#			rust-lib-src = (
+#				nixpkgs.runcommand 
+#					"rustlibsrc"
+#					{}
+#					''cp -r ${mozilla_rust_channel.rust-src}/lib/rustlib/src/rust/library $out''
+#			);
+#		in
+#			rust-lib-src 
+#	;
+
+			
+
+
+
+
+
   # Params:
   #   rustChannel:
   #     A rust channel created using 
